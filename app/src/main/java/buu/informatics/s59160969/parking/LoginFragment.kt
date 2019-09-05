@@ -12,7 +12,7 @@ import buu.informatics.s59160969.parking.databinding.FragmentLoginBinding
 /**
  * A simple [Fragment] subclass.
  */
-class loginFragment : Fragment() {
+class LoginFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

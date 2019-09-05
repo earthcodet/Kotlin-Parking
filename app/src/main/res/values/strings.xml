@@ -7,4 +7,9 @@
     <string name="what_is_your_password">password</string>
     <string name="login">login</string>
     <string name="loginform">LoginForm</string>
+    <string name="update">update</string>
+    <string name="delete">delete</string>
+    <string name="what_is_your_id">หมายเลขทะเบียนรถ</string>
+    <string name="what_is_your_model">หมายเลขรุ่น</string>
+    <string name="what_is_your_name">ชื่อเจ้าของรถ</string>
 </resources>
