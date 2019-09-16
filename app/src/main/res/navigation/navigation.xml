@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="buu.informatics.s59160969.parking.LoginFragment"
+        android:label="LoginFragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_parkingFragment"
+            app:destination="@id/parkingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/parkingFragment"
+        android:name="buu.informatics.s59160969.parking.ParkingFragment"
+        android:label="ParkingFragment" />
+</navigation>
