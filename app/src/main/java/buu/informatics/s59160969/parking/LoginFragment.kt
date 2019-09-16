@@ -3,14 +3,13 @@ package buu.informatics.s59160969.parking
 
 import android.content.Context
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import androidx.core.content.ContextCompat.getSystemService
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import buu.informatics.s59160969.parking.databinding.FragmentLoginBinding
 
 /**
@@ -27,9 +26,19 @@ class LoginFragment : Fragment() {
             R.layout.fragment_login,container,false)
 
         binding.LoginButton.setOnClickListener{checkInput(it)}
+        setHasOptionsMenu(true)
         return binding.root
     }
 
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater?.inflate(R.menu.optionmenu,menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item!!,
+            view!!.findNavController()) || super.onOptionsItemSelected(item)
+    }
     fun checkInput(view: View) {
         binding.apply {
             alertText.visibility  = View.GONE
